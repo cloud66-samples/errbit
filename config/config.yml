@@ -65,10 +65,10 @@ deployment:
     web: errbit.example.com
     app: errbit.example.com
     db: errbit.example.com
-  repository: http://github.com/errbit/errbit.git
+  repository: http://github.com/cloud66-samples/errbit.git
   branch: master
   user: deploy
-  deploy_to: /var/www/apps/errbit
+  deploy_to: /var/deploy/errbit
   # setup path to unicorn pids folder (or deploy_to/shared/pids will be used)
   # pids: /var/www/apps/errbit/shared/pids
 

@@ -92,8 +92,8 @@ group :development, :test do
   gem 'ruby-debug', :platform => :mri_18
   gem 'debugger', :platform => :mri_19
   gem 'pry-rails'
-#  gem 'rpm_contrib'
-#  gem 'newrelic_rpm'
+# gem 'rpm_contrib'
+# gem 'newrelic_rpm'
   gem 'quiet_assets'
 end
 
@@ -105,10 +105,6 @@ group :development do
   gem 'binding_of_caller', :platform => :ruby_19
   gem 'meta_request'     , :platform => :ruby_19
   gem 'foreman'
-
-  # Use thin for development
-  gem 'thin', :group => :development, :platform => :ruby
-
 end
 
 group :test do
@@ -122,10 +118,7 @@ group :test do
   gem 'coveralls', :require => false
 end
 
-group :heroku, :production do
-  gem 'unicorn'
-end
-
+gem 'unicorn'
 
 # Gems used only for assets and not required
 # in production environments by default.

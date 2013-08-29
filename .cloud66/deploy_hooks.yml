@@ -2,7 +2,7 @@ production:
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
         destination: ~/bundle.sh
-        target: mongodb
+        target: rails
         apply_during: build_only
         execute: true
         sudo: true
@@ -10,7 +10,7 @@ staging:
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
         destination: ~/bundle.sh
-        target: mongodb
+        target: rails
         apply_during: build_only
         execute: true
         sudo: true
@@ -18,7 +18,7 @@ development:
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
         destination: ~/bundle.sh
-        target: mongodb
+        target: rails
         apply_during: build_only
         execute: true
         sudo: true

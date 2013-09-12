@@ -77,59 +77,66 @@ gem 'omniauth-github'
 
 
 platform :ruby do
-  gem 'mongo'
-  gem 'bson'
-  gem 'bson_ext'
+	gem 'mongo'
+	gem 'bson'
+	gem 'bson_ext'
 end
 
 gem 'ri_cal'
 gem 'yajl-ruby', :require => "yajl"
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.6'
-  gem 'webmock', :require => false
-  gem 'airbrake', :require => false
-  gem 'ruby-debug', :platform => :mri_18
-  gem 'debugger', :platform => :mri_19
-  gem 'pry-rails'
-# gem 'rpm_contrib'
-# gem 'newrelic_rpm'
-  gem 'quiet_assets'
+	gem 'rspec-rails', '~> 2.6'
+	gem 'webmock', :require => false
+	gem 'airbrake', :require => false
+	gem 'ruby-debug', :platform => :mri_18
+	gem 'debugger', :platform => :mri_19
+	gem 'pry-rails'
+#  gem 'rpm_contrib'
+#  gem 'newrelic_rpm'
+	gem 'quiet_assets'
 end
 
 group :development do
-  gem 'capistrano'
+	gem 'capistrano'
 
-  # better errors
-  gem 'better_errors'    , :platform => :ruby_19
-  gem 'binding_of_caller', :platform => :ruby_19
-  gem 'meta_request'     , :platform => :ruby_19
-  gem 'foreman'
+	# better errors
+	gem 'better_errors'    , :platform => :ruby_19
+	gem 'binding_of_caller', :platform => :ruby_19
+	gem 'meta_request'     , :platform => :ruby_19
+	gem 'foreman'
+
+	# Use thin for development
+	gem 'thin', :group => :development, :platform => :ruby
+
 end
 
 group :test do
-  # Capybara 2.1.0 no more support 1.8.7 ruby version
-  gem 'capybara', "~> 2.0.1"
-  gem 'launchy'
-  # DatabaseCleaner 1.0.0 drop the support of ruby 1.8.7
-  gem 'database_cleaner', '~> 0.9.0'
-  gem 'email_spec'
-  gem 'timecop', '0.6.1' # last version compatible to ruby 1.8
-  gem 'coveralls', :require => false
+	# Capybara 2.1.0 no more support 1.8.7 ruby version
+	gem 'capybara', "~> 2.0.1"
+	gem 'launchy'
+	# DatabaseCleaner 1.0.0 drop the support of ruby 1.8.7
+	gem 'database_cleaner', '~> 0.9.0'
+	gem 'email_spec'
+	gem 'timecop', '0.6.1' # last version compatible to ruby 1.8
+	gem 'coveralls', :require => false
 end
 
-gem 'unicorn'
+group :heroku, :production do
+	gem 'unicorn'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'execjs'
-  gem 'therubyracer', :platform => :ruby  # C Ruby (MRI) or Rubinius, but NOT Windows
-  gem 'uglifier',     '>= 1.0.3'
-  # We can't upgrade because not compatible to jquery >= 1.9.
-  # To do that, we need fix the rails.js
-  gem 'jquery-rails', '~> 2.1.4'
-  gem 'pjax_rails'
-  gem 'underscore-rails'
-  gem 'turbo-sprockets-rails3'
+	gem 'execjs'
+	gem 'therubyracer', :platform => :ruby  # C Ruby (MRI) or Rubinius, but NOT Windows
+	gem 'uglifier',     '>= 1.0.3'
+											# We can't upgrade because not compatible to jquery >= 1.9.
+											# To do that, we need fix the rails.js
+	gem 'jquery-rails', '~> 2.1.4'
+	gem 'pjax_rails'
+	gem 'underscore-rails'
+	gem 'turbo-sprockets-rails3'
 end

@@ -1,12 +1,12 @@
 # The host of your errbit server
-host: errbit.example.com
+host: ENV['APP_HOST']
 
 # Enforce SSL connections
 enforce_ssl: false
 
 # The email address which email notifications
 # will be sent from.
-email_from: errbit@example.com
+email_from: ENV['MAILER_SENDER']
 
 # If you turn on this option, email_at_notices can be
 # configured on a per app basis, at the App edit page
@@ -71,9 +71,9 @@ gravatar_default: identicon
 # Callback URL: http://errbit.example.com/users/auth/github
 #
 # After you have registered your app, copy your Client ID and Secret key below.
-github_authentication: false
-github_client_id: 'GITHUB_CLIENT_ID'
-github_secret: 'GITHUB_SECRET'
+github_authentication: ENV['GITHUB_AUTHENTICATION']
+github_client_id: ENV['GITHUB_CLIENT_ID']
+github_secret: ENV['GITHUB_SECRET']
 # GitHub Permissions to request from user
 #   ['repo']        - Allow creating issues for public and private repos.
 #   ['public_repo'] - Only allow creating issues for public repos.
@@ -83,14 +83,14 @@ github_access_scope: ['repo']
 # Configure SMTP settings. If you are running Errbit on Heroku,
 # sendgrid will be configured by default.
 # ------------------------------------------------------------------------
-#smtp_settings:
-#  :address:              ADDRESS
-#  :domain:               DOMAIN
-#  :port:                 "25"
-#  :authentication:       :plain, :login, :cram_md5
-#  :enable_starttls_auto: true
-#  :user_name:            USERNAME
-#  :password:             PASSWORD
+smtp_settings:
+  :address:              ENV['SMTP_ADDRESS']
+  :domain:               ENV['SMTP_DOMAIN']
+  :port:                 "25"
+  :authentication:       :plain, :login, :cram_md5
+  :enable_starttls_auto: true
+  :user_name:            ENV['SMTP_USERNAME']
+  :password:             ENV['SMTP_PASSWORD']
 
 
 # If you want send your email by your sendmail

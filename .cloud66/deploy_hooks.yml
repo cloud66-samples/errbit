@@ -1,7 +1,7 @@
 production:
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
-        destination: ~/bundle.sh
+        destination: /tmp/bundle.sh
         target: rails
         apply_during: build_only
         execute: true
@@ -9,7 +9,7 @@ production:
 staging:
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
-        destination: ~/bundle.sh
+        destination: /tmp/bundle.sh
         target: rails
         apply_during: build_only
         execute: true
@@ -17,7 +17,7 @@ staging:
 development:
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
-        destination: ~/bundle.sh
+        destination: /tmp/bundle.sh
         target: rails
         apply_during: build_only
         execute: true

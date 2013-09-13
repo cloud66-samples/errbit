@@ -1,5 +1,5 @@
 # The host of your errbit server
-host: ENV['APP_HOST']
+host: errbit.example.com
 
 # Enforce SSL connections
 enforce_ssl: false

@@ -6,7 +6,7 @@ enforce_ssl: false
 
 # The email address which email notifications
 # will be sent from.
-email_from: ENV['MAILER_SENDER']
+email_from: philip@hej.se
 
 # If you turn on this option, email_at_notices can be
 # configured on a per app basis, at the App edit page
@@ -43,7 +43,9 @@ allow_comments_with_issue_tracker: true
 # Pull requests are always welcome!
 # However, you might be more comfortable setting this to false if your server can be accessed by anyone.
 display_internal_errors: true
+# The host of your errbit server
 
+allow_comments_with_issue_tracker: true
 # Enable Gravatar.
 use_gravatar: true
 # Default Gravatar image, can be: mm, identicon, monsterid, wavatar, retro.
@@ -84,13 +86,13 @@ github_access_scope: ['repo']
 # sendgrid will be configured by default.
 # ------------------------------------------------------------------------
 smtp_settings:
-  :address: smtp.sendgrid.net
-  :domain: hej.se
+  :address: "smtp.sendgrid.net"
+  :domain: "hej.se"
   :port: "587"
   :authentication: :plain
-  :enable_starttls_auto: true
-  :user_name: pkallberg
-  :password: sendgrid
+  :enable_starttls_auto: "true"
+  :user_name: "pkallberg"
+  :password: "sendgrid"
 
 
 # If you want send your email by your sendmail

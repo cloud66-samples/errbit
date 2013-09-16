@@ -84,13 +84,13 @@ github_access_scope: ['repo']
 # sendgrid will be configured by default.
 # ------------------------------------------------------------------------
 smtp_settings:
-  :address:              ENV['SMTP_ADDRESS']
-  :domain:               ENV['SMTP_DOMAIN']
-  :port:                 "587"
-  :authentication:       :plain
+  :address: ENV['SMTP_ADDRESS']
+  :domain: ENV['SMTP_DOMAIN']
+  :port: "587"
+  :authentication: :plain
 # :enable_starttls_auto: true
-  :user_name:            ENV['SMTP_USERNAME']
-  :password:             ENV['SMTP_PASSWORD']
+  :user_name: ENV['SMTP_USERNAME']
+  :password: ENV['SMTP_PASSWORD']
 
 
 # If you want send your email by your sendmail

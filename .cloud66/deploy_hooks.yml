@@ -6,6 +6,13 @@ production:
         apply_during: build_only
         execute: true
         sudo: true
+      - source: /.cloud66/scripts/env_vars.sh
+        destination: /tmp/env_vars.sh
+        target: rails
+        apply_during: build_only
+        execute: true
+        sudo: true
+        parse: true
 staging:
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
@@ -14,6 +21,13 @@ staging:
         apply_during: build_only
         execute: true
         sudo: true
+      - source: /.cloud66/scripts/env_vars.sh
+        destination: /tmp/env_vars.sh
+        target: rails
+        apply_during: build_only
+        execute: true
+        sudo: true
+        parse: true
 development:
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
@@ -22,3 +36,10 @@ development:
         apply_during: build_only
         execute: true
         sudo: true
+      - source: /.cloud66/scripts/env_vars.sh
+        destination: /tmp/env_vars.sh
+        target: rails
+        apply_during: build_only
+        execute: true
+        sudo: true
+        parse: true

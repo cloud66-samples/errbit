@@ -1,11 +1,11 @@
 #!/bin/bash
 cd $RAILS_STACK_PATH
-echo "email_from: ENV['MAILER_SENDER']
+echo "email_from: $MAILER_SENDER
 smtp_settings:
-	:address: ENV['SMTP_ADDRESS']
-    :domain: ENV['SMTP_DOMAIN']
-    :port: ENV['SMTP_PORT']
+	:address: $SMTP_ADDRESS
+    :domain: $SMTP_DOMAIN
+    :port: $SMTP_PORT
     :authentication: :plain
     :enable_starttls_auto: "true"
-    :user_name: ENV['SMTP_USERNAME']
-    :password: ENV['SMTP_PASSWORD']" >> config/config.yml
+    :user_name: $SMTP_USERNAME
+    :password: $SMTP_PASSWORD" >> config/config.yml

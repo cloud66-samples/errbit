@@ -12,7 +12,6 @@ production:
         apply_during: build_only
         execute: true
         sudo: true
-        parse: true
 staging:
     after_rails:
       - source: /.cloud66/scripts/bundle.sh

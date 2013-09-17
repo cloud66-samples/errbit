@@ -1,6 +1,9 @@
 #!/bin/bash
 cd $RAILS_STACK_PATH
-echo "host: $ERRBIT_HOST
+echo "github_authentication: $GITHUB_AUTHENTICATION
+github_client_id: $GITHUB_CLIENT_ID
+github_secret: $GITHUB_SECRET
+host: $ERRBIT_HOST
 email_from: $MAILER_SENDER
 smtp_settings:
 	:address: $SMTP_ADDRESS

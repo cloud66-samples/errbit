@@ -72,9 +72,7 @@ gravatar_default: identicon
 # Callback URL: http://errbit.example.com/users/auth/github
 #
 # After you have registered your app, copy your Client ID and Secret key below.
-github_authentication: ENV['GITHUB_AUTHENTICATION']
-github_client_id: ENV['GITHUB_CLIENT_ID']
-github_secret: ENV['GITHUB_SECRET']
+
 # GitHub Permissions to request from user
 #   ['repo']        - Allow creating issues for public and private repos.
 #   ['public_repo'] - Only allow creating issues for public repos.
@@ -85,13 +83,13 @@ github_access_scope: ['repo']
 # sendgrid will be configured by default.
 # ------------------------------------------------------------------------
 #smtp_settings:
-#  :address: "smtp.sendgrid.net"
-#  :domain: "hej.se"
-#  :port: "587"
+#  :address:
+#  :domain:
+#  :port:
 #  :authentication: :plain
-#  :enable_starttls_auto: "true"
-#  :user_name: "pkallberg"
-#  :password: "sendgrid"
+#  :enable_starttls_auto:
+#  :user_name:
+#  :password:
 
 
 # If you want send your email by your sendmail

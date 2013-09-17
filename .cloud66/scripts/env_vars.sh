@@ -1,6 +1,7 @@
 #!/bin/bash
 cd $RAILS_STACK_PATH
-echo "email_from: $MAILER_SENDER
+echo "host: $ERRBIT_HOST
+email_from: $MAILER_SENDER
 smtp_settings:
 	:address: $SMTP_ADDRESS
     :domain: $SMTP_DOMAIN

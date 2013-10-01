@@ -98,6 +98,10 @@ Note: Setting environment variables is done during step five, before you click '
 10. GITHUB_SECRET = GitHub secret
 11. GITHUB_AUTHENTICATION = GitHub authentication
 
+<a href="http://www.cloud66.com">
+<img src="http://cdn.cloud66.com/images/deploy-with-cloud66.png"/>
+</a>
+
 Installation
 ------------
 

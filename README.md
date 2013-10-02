@@ -85,12 +85,11 @@ Email: demo@errbit-demo.herokuapp.com<br/>
 Password: password
 
 ## Deploying with Cloud 66
-Deploying and maintaining a Gitlab setup through Cloud 66 is extremely easy. 
+Deploying and maintaining an Errbit setup through Cloud 66 is extremely easy. 
 Click the badge and follow the instructions below to deploy!
 
 #### Deploying on Cloud 66
-Deploying and maintaining a Errbit setup through Cloud 66 is extremely easy. Simply follow
-7 steps on [building your stack](https://www.cloud66.com/help/first_stack), sign up for a Sendgrid account (for sending emails) and set 
+Simply follow 7 steps on [building your stack](https://www.cloud66.com/help/first_stack), sign up for a Sendgrid account (for sending emails) and set 
 the environment variables below to have your own fully functioning Errbit installation up and running. 
 
 Note: Setting environment variables is done during step five, before you click 'deploy':

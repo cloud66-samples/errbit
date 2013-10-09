@@ -93,17 +93,17 @@ the environment variables below to have your own fully functioning Errbit instal
 Note: Setting environment variables is done during step five, before you click 'deploy':
 ![Environment variables](https://raw.github.com/cloud66-samples/errbit/master/docs/environment_variables.png)
 
-1. ERRBIT_HOST = your hostname
-2. APP_HOST = your application hostname
-3. MAILER_SENDER = the email address you use to send emails
-4. SMTP_ADDRESS = SMTP host
-5. SMTP_DOMAIN = SMTP domain
-6. SMTP_PORT = SMTP port
-7. SMTP_USERNAME = SMTP username
-8. SMTP_PASSWORD = SMTP password
-9. GITHUB_CLIENT_ID = GitHub Client ID
-10. GITHUB_SECRET = GitHub secret
-11. GITHUB_AUTHENTICATION = GitHub authentication
+1. ERRBIT_HOST=your hostname
+2. APP_HOST=your application hostname
+3. MAILER_SENDER=the email address you use to send emails
+4. SMTP_ADDRESS=SMTP host
+5. SMTP_DOMAIN=SMTP domain
+6. SMTP_PORT=SMTP port
+7. SMTP_USERNAME=SMTP username
+8. SMTP_PASSWORD=SMTP password
+9. GITHUB_CLIENT_ID=GitHub Client ID
+10. GITHUB_SECRET=GitHub secret
+11. GITHUB_AUTHENTICATION=GitHub authentication
 
 Default login credentials:
 

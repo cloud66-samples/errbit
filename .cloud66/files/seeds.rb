@@ -13,12 +13,13 @@ puts "-- password: #{admin_pass}"
 puts ""
 puts "Be sure to change these credentials ASAP!"
 user = User.where(:email => admin_email).first || User.new({
-  :name                   => 'Errbit Admin',
-  :email                  => admin_email,
-  :password               => admin_pass,
-  :password_confirmation  => admin_pass
-})
+															   :name                   => 'Errbit Admin',
+															   :email                  => admin_email,
+															   :password               => admin_pass,
+															   :password_confirmation  => admin_pass
+														   })
 user.username = admin_username if Errbit::Config.user_has_username
 
 user.admin = true
 user.save!
+

@@ -1,7 +1,3 @@
-<a href="http://blog.cloud66.com/post/62900887610/introducing-cloud-66-easydeploy">
-![Logo](http://cdn.cloud66.com/images/easy-deploy.png)
-</a>
-
 # Errbit [![TravisCI][travis-img-url]][travis-ci-url] [![Code Climate][codeclimate-img-url]][codeclimate-url] [![Coveralls][coveralls-img-url]][coveralls-url] [![Dependency Status][gemnasium-img-url]][gemnasium-url]
 
 [travis-img-url]: https://secure.travis-ci.org/errbit/errbit.png?branch=master
@@ -83,6 +79,10 @@ Email: demo@errbit-demo.herokuapp.com<br/>
 Password: password
 
 ## Deploying with Cloud 66
+<a href="http://blog.cloud66.com/post/62900887610/introducing-cloud-66-easydeploy">
+![Logo](http://cdn.cloud66.com/images/easy-deploy.png)
+</a>
+
 Deploying and maintaining an Errbit setup through Cloud 66 is extremely easy. 
 Click the badge and follow the instructions below to deploy!
 

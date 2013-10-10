@@ -34,5 +34,3 @@ else
   ERROR
   end
 end
-
-Devise.secret_key = Errbit::Application.config.secret_token

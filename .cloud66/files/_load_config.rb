@@ -4,10 +4,7 @@ default_config_file = Rails.root.join("config", "config.yml")
 # Allow a Rails Engine to override config by defining it earlier
 unless defined?(Errbit::Config)
   Errbit::Config = OpenStruct.new
-  use_env = ENV['HEROKU'] || ENV['USE_ENV']
 
-  # If Errbit is running on Heroku, config can be set from environment variables.
-  if use_env
     Errbit::Config.host = ENV['ERRBIT_HOST']
     Errbit::Config.email_from = ENV['ERRBIT_EMAIL_FROM']
     #  Not really easy to use like an env because need an array and ENV return a string :(
@@ -33,7 +30,6 @@ unless defined?(Errbit::Config)
       :password       => ENV['SMTP_PASSWORD']   || ENV['SENDGRID_PASSWORD'],
       :domain         => ENV['SMTP_DOMAIN'] || ENV['SENDGRID_DOMAIN'] || ENV['ERRBIT_EMAIL_FROM'].split('@').last
     }
-  end
 
   # Use example config for test environment.
   config_file = Rails.env == "test" ? default_config_file : Rails.root.join("config", "config.yml")

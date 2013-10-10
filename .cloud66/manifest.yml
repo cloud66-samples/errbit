@@ -1,0 +1,18 @@
+production:
+    rails:
+        server:
+            unique_name: errbit
+        environment_variables:
+            SECRET_TOKEN: AUTO_GENERATE_30
+staging:
+    rails:
+        server:
+            unique_name: errbit
+        environment_variables:
+            SECRET_TOKEN: AUTO_GENERATE_30
+development:
+    rails:
+        server:
+            unique_name: errbit
+        environment_variables:
+            SECRET_TOKEN: AUTO_GENERATE_30

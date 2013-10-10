@@ -1,4 +1,23 @@
 production:
+    after_checkout:
+      - source: /.cloud66/files/Procfile
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/Procfile
+        target: rails
+      - source: /.cloud66/files/_load_config.rb
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/initializers/_load_config.rb
+        target: rails
+      - source: /.cloud66/files/config.yml
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/config.yml
+        target: rails
+      - source: /.cloud66/files/mongoid.yml
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/mongoid.yml
+        target: rails
+      - source: /.cloud66/files/seeds.rb
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/db/seeds.rb
+        target: rails
+      - source: /.cloud66/files/unicorn.rb.cloud66
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/unicorn.rb.cloud66
+        target: rails
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
         destination: /tmp/bundle.sh
@@ -13,6 +32,25 @@ production:
         execute: true
         sudo: true
 staging:
+    after_checkout:
+      - source: /.cloud66/files/Procfile
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/Procfile
+        target: rails
+      - source: /.cloud66/files/_load_config.rb
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/initializers/_load_config.rb
+        target: rails
+      - source: /.cloud66/files/config.yml
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/config.yml
+        target: rails
+      - source: /.cloud66/files/mongoid.yml
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/mongoid.yml
+        target: rails
+      - source: /.cloud66/files/seeds.rb
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/db/seeds.rb
+        target: rails
+      - source: /.cloud66/files/unicorn.rb.cloud66
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/unicorn.rb.cloud66
+        target: rails
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
         destination: /tmp/bundle.sh
@@ -28,6 +66,25 @@ staging:
         sudo: true
         parse: true
 development:
+    after_checkout:
+      - source: /.cloud66/files/Procfile
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/Procfile
+        target: rails
+      - source: /.cloud66/files/_load_config.rb
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/initializers/_load_config.rb
+        target: rails
+      - source: /.cloud66/files/config.yml
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/config.yml
+        target: rails
+      - source: /.cloud66/files/mongoid.yml
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/mongoid.yml
+        target: rails
+      - source: /.cloud66/files/seeds.rb
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/db/seeds.rb
+        target: rails
+      - source: /.cloud66/files/unicorn.rb.cloud66
+        destination: <%= ENV['RAILS_STACK_PATH'] %>/config/unicorn.rb.cloud66
+        target: rails
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
         destination: /tmp/bundle.sh

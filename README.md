@@ -91,7 +91,7 @@ Simply follow 7 steps on [building your stack](https://www.cloud66.com/help/firs
 the environment variables below to have your own fully functioning Errbit installation up and running. 
 
 Note: Setting environment variables is done during step five, before you click 'deploy':
-![Environment variables](https://raw.github.com/cloud66-samples/errbit/master/docs/environment_variables.png)
+![Environment variables](http://cdn.cloud66.com/images/environment_variables.png)
 
 1. ERRBIT_HOST=your hostname
 2. APP_HOST=your application hostname

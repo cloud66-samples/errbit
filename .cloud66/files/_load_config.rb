@@ -28,7 +28,7 @@ unless defined?(Errbit::Config)
       :authentication => :plain,
       :user_name      => ENV['SMTP_USERNAME']   || ENV['SENDGRID_USERNAME'],
       :password       => ENV['SMTP_PASSWORD']   || ENV['SENDGRID_PASSWORD'],
-      :domain         => ENV['SMTP_DOMAIN'] || ENV['SENDGRID_DOMAIN'] || ENV['ERRBIT_EMAIL_FROM'].split('@').last
+      :domain         => ENV['SMTP_DOMAIN'] || ENV['SENDGRID_DOMAIN']
     }
 
   # Use example config for test environment.

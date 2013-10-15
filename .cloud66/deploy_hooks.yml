@@ -3,24 +3,31 @@ production:
       - source: /.cloud66/files/Procfile
         destination: <%= ENV['RAILS_STACK_PATH'] %>/Procfile
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/_load_config.rb
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/initializers/_load_config.rb
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/config.yml
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/config.yml
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/mongoid.yml
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/mongoid.yml
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/secret_token.rb
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/initializers/secret_token.rb
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/seeds.rb
         destination: <%= ENV['RAILS_STACK_PATH'] %>/db/seeds.rb
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/unicorn.rb.cloud66
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/unicorn.rb.cloud66
         target: rails
+        run_on: all_servers
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
         destination: /tmp/bundle.sh
@@ -39,24 +46,31 @@ staging:
       - source: /.cloud66/files/Procfile
         destination: <%= ENV['RAILS_STACK_PATH'] %>/Procfile
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/_load_config.rb
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/initializers/_load_config.rb
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/config.yml
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/config.yml
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/mongoid.yml
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/mongoid.yml
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/secret_token.rb
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/initializers/secret_token.rb
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/seeds.rb
         destination: <%= ENV['RAILS_STACK_PATH'] %>/db/seeds.rb
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/unicorn.rb.cloud66
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/unicorn.rb.cloud66
         target: rails
+        run_on: all_servers
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
         destination: /tmp/bundle.sh
@@ -76,24 +90,31 @@ development:
       - source: /.cloud66/files/Procfile
         destination: <%= ENV['RAILS_STACK_PATH'] %>/Procfile
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/_load_config.rb
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/initializers/_load_config.rb
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/config.yml
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/config.yml
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/mongoid.yml
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/mongoid.yml
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/secret_token.rb
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/initializers/secret_token.rb
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/seeds.rb
         destination: <%= ENV['RAILS_STACK_PATH'] %>/db/seeds.rb
         target: rails
+        run_on: all_servers
       - source: /.cloud66/files/unicorn.rb.cloud66
         destination: <%= ENV['RAILS_STACK_PATH'] %>/config/unicorn.rb.cloud66
         target: rails
+        run_on: all_servers
     after_rails:
       - source: /.cloud66/scripts/bundle.sh
         destination: /tmp/bundle.sh
